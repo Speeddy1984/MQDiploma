@@ -229,8 +229,6 @@ a {
 .wrp-trends {
   z-index: 2;
 
-  display: flex;
-  flex-direction: column;
   width: 100%;
   padding: 36px 37px 37px 30px;
 
@@ -740,15 +738,12 @@ a {
 
 .product-image {
   min-height: 204px;
-  padding-left: 23px;
-  padding-right: 23px;
+  margin: 0 auto;
 }
 
 .wrp-product {
   flex-grow: 1;
 
-  display: flex;
-  flex-direction: column;
   padding: 40px 20px 28px 20px;
   margin-top: -30px;
 
@@ -823,8 +818,9 @@ a {
 .totheshop-btn {
   width: 48%;
   height: 47px;
-  padding: none;
-  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   font-family: OpenSans, Arial, sans-serif;
   font-weight: 700;
@@ -1080,9 +1076,9 @@ a {
   border: 1px solid #b59f5b;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 640px) and (max-width: 1199px) {
   body {
-    min-width: 768px;
+    min-width: 640px;
     max-width: 1199px;
   }
 
@@ -1172,17 +1168,26 @@ a {
     padding: 49px 35px 46px 35px;
   }
 
+  .posts {
+    width: 56.0171%;
+  }
+
+  .aside {
+    width: 38.9685%;
+    margin-left: 5.0144%;
+  }
+
   .post {
     flex-direction: column;
-    min-width: 395px;
+    min-width: 100%;
   }
 
   .post:nth-child(n + 2) {
-    margin-top: 42px;
+    margin-top: 46px;
   }
 
   .post-image {
-    min-width: 390px;
+    min-width: 100%;
     min-height: 302px;
     margin-bottom: 10px;
   }
@@ -1235,8 +1240,6 @@ a {
   }
 
   .product-image {
-    padding-left: 11px;
-    padding-right: 11px;
     margin: 0 auto;
   }
 
@@ -1266,12 +1269,23 @@ a {
   .copyright {
     padding-top: 47px;
   }
+
+  @media (orientation: landscape) {
+    .trends-items > .trends-item {
+      width: calc((100% - (4px * 3)) / 4);
+    }
+
+    .trends-items > .trends-item:nth-child(n + 2) {
+      margin-left: 4px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
 }
 
-@media (min-width: 360px) and (max-width: 767px) {
+@media (max-width: 639px) {
   body {
-    min-width: 360px;
-    max-width: 767px;
+    max-width: 639px;
   }
 
   .container-header {
@@ -1374,15 +1388,8 @@ a {
   .post {
     flex-direction: column;
     min-width: 322px;
-  }
 
-  .post::after {
-    content: "";
-    display: block;
-    width: 329px;
-    margin: 0 auto;
-    padding-top: 8px;
-
+    padding-bottom: 8px;
     border-bottom: 3px solid #ededed;
   }
 
@@ -1524,8 +1531,6 @@ a {
   }
 
   .product-image {
-    padding-left: 10px;
-    padding-right: 10px;
     margin: 0 auto;
   }
 
@@ -1558,19 +1563,7 @@ a {
     padding-bottom: 41px;
   }
 
-  @media (min-width: 641px) and (max-width: 767px) and (orientation: landscape) {
-    .trends-items > .trends-item {
-      width: calc((100% - (4px * 3)) / 4);
-    }
-
-    .trends-items > .trends-item:nth-child(n + 2) {
-      margin-left: 4px;
-      margin-bottom: 0;
-      margin-top: 0;
-    }
-  }
-
-  @media (max-width: 640px) and (orientation: landscape) {
+  @media (orientation: landscape) {
     .trends-items > .trends-item {
       width: calc((100% - (4px * 1)) / 2);
     }
